@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WaterWise</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== A. HOME SCREEN (DONE) ===== -->
+  <main class="screen" id="home" aria-labelledby="home-title">
+    <header class="screen-header">
+      <h1 id="home-title" class="greeting">Morning!</h1>
+    </header>
+
+    <!-- One amber card = the one urgent thing -->
+    <section class="card card-urgent" aria-labelledby="urgent-title">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M12 2.5C12 2.5 5 10 5 15a7 7 0 0 0 14 0c0-5-7-12.5-7-12.5z" fill="currentColor"/>
+      </svg>
+      <div class="card-body">
+        <h2 id="urgent-title" class="card-title">Fern needs water!</h2>
+        <p class="card-meta">Dry for 3 days – kitchen</p>
+      </div>
+      <div class="button-row">
+        <button type="button" class="btn btn-primary">Mark as watered</button>
+        <button type="button" class="btn btn-outline">Snooze 1 hour</button>
+      </div>
+    </section>
+
+    <!-- Healthy plants stay quiet and grey -->
+    <section aria-labelledby="plants-title">
+      <h2 id="plants-title" class="visually-hidden">Other plants</h2>
+      <ul class="plant-list">
+        <li class="card card-quiet plant">
+          <span class="plant-name">Monstera</span>
+          <span class="status status-ok">
+            <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            OK – Thu
+          </span>
+        </li>
+        <li class="card card-quiet plant">
+          <span class="plant-name">Cactus</span>
+          <span class="status status-ok">
+            <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            OK – Mon
+          </span>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="sync-status">
+      <p>Synced 2 min ago – works offline</p>
+    </footer>
+  </main>
+
+  <!-- ===== B. WHEN THE SENSOR FAILS (TODO) ===== -->
+  <!--
+    TODO: <section id="sensor-failed"> for the Fern detail screen
+      - back link "< Fern"
+      - plain-words message: "Sensor not responding. No worries – check by hand."
+      - question: "Is the soil dry 2 cm down?" with Yes / No buttons
+      - "Retry sensor" button always visible
+      - note: reminders keep going every 3 days; last reading: 2 days ago
+      - 10-second undo
+  -->
+
+  <!-- ===== C. ECO + ACCESS SETTINGS (TODO) ===== -->
+  <!--
+    TODO: <section id="settings">
+      - toggles: Eco mode, Voice control, Haptic buzz, Spoken confirms
+      - text size control (100% / 150% / 200%)
+      - JS to set data-theme="eco" and data-text-size on <html>
+  -->
+
+</body>
+</html>
